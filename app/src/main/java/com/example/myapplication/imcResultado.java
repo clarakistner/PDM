@@ -36,7 +36,25 @@ public class imcResultado extends AppCompatActivity {
         tvResultado.setText(Double.toString(imc));
         imageView.setImageResource(R.drawable.perfil);
 
-        if(imc < 18.9){imageView.setImageResource(R.drawable.abaixopeso);}
+        if(imc < 18.5){
+            imageView.setImageResource(R.drawable.abaixopeso);
+        }
+        if(imc >= 18.5 && imc < 25){
+            imageView.setImageResource(R.drawable.normal);
+        }
+        if(imc >= 25 && imc < 30){
+            imageView.setImageResource(R.drawable.sobrepeso);
+        }
+        if(imc >= 30 && imc < 35){
+            imageView.setImageResource(R.drawable.obesidade1);
+        }
+        if(imc >= 35 && imc < 40){
+            imageView.setImageResource(R.drawable.obesidade2);
+        }
+        if(imc >= 40){
+            imageView.setImageResource(R.drawable.obesidade3);
+        }
+
 
     }
 }
